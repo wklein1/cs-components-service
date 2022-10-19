@@ -1,3 +1,3 @@
-import csvReader
+import modules.csv.csv_reader as csv_reader
 
-components = csvReader.readCSV("hardware_components.csv")
+components = csv_reader.readCSV("hardware_components.csv")

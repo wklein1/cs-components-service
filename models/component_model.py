@@ -1,5 +1,5 @@
-from pydantic import BaseModel,Field,Extra,validator
 from models.custom_base_model import CustomBaseModel
+from pydantic import Field,validator
 
 class Component(CustomBaseModel):
     id: int

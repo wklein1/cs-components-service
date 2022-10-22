@@ -1,12 +1,12 @@
 name,vendor,price,description,location,manufacturer,product_group,weight,status,ean_number
-EVGA SuperNOVA GT 850 850W,notebooksbilliger.de,89.90,,Germany,220-GT-0850-Y2,Power-supply,,new,4250812439109
-INNO3D GeForce RTX 3060 Ti Twin X2 LHR Grafikkarte - 8GB GDDR6,notebooksbilliger.de,569.00,,Germany,N306T2-08D6-119032DH,GPU,,new,835168002340
-ASUS ROG Strix B550-A,notebooksbilliger.de,170.51,,Germany,90MB15J0-M0EAY0,Mainboard,,new,4718017826594
-AMD Ryzen 9 5950X,notebooksbilliger.de,559.00,,Germany,100-100000059WOF,CPU,,new,730143312745
-Samsung 870 EVO SSD 500GB,notebooksbilliger.de,74.90,,Germany,MZ-77E500B/EU,SSD,,new,8806090545924
-G.SKILL Aegis Schwarz 32GB Kit,notebooksbilliger.de,121.90,,Germany,F4-3200C16D-32GIS,RAM,,new,4713294224415
-ASUS BW-16D1HT,notebooksbilliger.de,79.90,,Germany,90DD01E0-B30000,Blueray-drive,,new,4716659418917
-Scythe Mugen 5 [Rev. B] ,notebooksbilliger.de,45.99,,Germany,SCMG-5100,Cooling fan,,new,4571225056357
-Cooler Master CM Force 500,notebooksbilliger.de,64.68,,Germany,FOR-500-KKN1,PC Case,,new,4719512041802
-Logitech MX Master 2S Bluetooth,notebooksbilliger.de,75.99,,Germany,910-005139,Mouse,,new,5099206073029
-Microsoft Bluetooth Keyboard,notebooksbilliger.de,37.99,,Germany,QSZ-00006,Keyboard,,new,889842519419
+EVGA SuperNOVA GT 850 850W,notebooksbilliger.de,89.90,,Germany,220-GT-0850-Y2,Power-supply,300,new,4250812439109
+INNO3D GeForce RTX 3060 Ti Twin X2 LHR Grafikkarte - 8GB GDDR6,notebooksbilliger.de,569.00,,Germany,N306T2-08D6-119032DH,GPU,300,new,835168002340
+ASUS ROG Strix B550-A,notebooksbilliger.de,170.51,,Germany,90MB15J0-M0EAY0,Mainboard,300,new,4718017826594
+AMD Ryzen 9 5950X,notebooksbilliger.de,559.00,,Germany,100-100000059WOF,CPU,300,new,730143312745
+Samsung 870 EVO SSD 500GB,notebooksbilliger.de,74.90,,Germany,MZ-77E500B/EU,SSD,300,new,8806090545924
+G.SKILL Aegis Schwarz 32GB Kit,notebooksbilliger.de,121.90,,Germany,F4-3200C16D-32GIS,RAM,300,new,4713294224415
+ASUS BW-16D1HT,notebooksbilliger.de,79.90,,Germany,90DD01E0-B30000,Blueray-drive,300,new,4716659418917
+Scythe Mugen 5 [Rev. B] ,notebooksbilliger.de,45.99,,Germany,SCMG-5100,Cooling fan,300,new,4571225056357
+Cooler Master CM Force 500,notebooksbilliger.de,64.68,,Germany,FOR-500-KKN1,PC Case,300,new,4719512041802
+Logitech MX Master 2S Bluetooth,notebooksbilliger.de,75.99,,Germany,910-005139,Mouse,300,new,5099206073029
+Microsoft Bluetooth Keyboard,notebooksbilliger.de,37.99,,Germany,QSZ-00006,Keyboard,300,new,889842519419

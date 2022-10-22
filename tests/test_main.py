@@ -13,10 +13,10 @@ def test_get_components_endpoint():
         "description": "",
         "location": "Germany",
         "manufacturer": "220-GT-0850-Y2",
-        "product_group": "Power-supply",
+        "productGroup": "Power-supply",
         "weight": 300.0,
         "status": "new",
-        "ean_number": "4250812439109"
+        "eanNumber": "4250812439109"
   }
 
 def test_get_components_endpoint_ids():

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import modules.csv.csv_reader as csv_reader
+from models.component_model import Component
 
 
 components = csv_reader.read_csv("hardware_components.csv")
@@ -30,6 +31,6 @@ app.add_middleware(
     expose_headers=["*"])
 
 
-@app.get("/components")
+@app.get("/components", response_model = list[Component])
 def get_components():
     return components

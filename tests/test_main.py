@@ -9,12 +9,12 @@ def test_get_components_endpoint():
         "id": 0,
         "name": "EVGA SuperNOVA GT 850 850W",
         "vendor": "notebooksbilliger.de",
-        "price": "89.90",
+        "price": 89.90,
         "description": "",
         "location": "Germany",
         "manufacturer": "220-GT-0850-Y2",
         "product_group": "Power-supply",
-        "weight": "",
+        "weight": 300.0,
         "status": "new",
         "ean_number": "4250812439109"
   }

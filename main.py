@@ -32,5 +32,5 @@ app.add_middleware(
 
 
 @app.get("/components", response_model = list[Component])
-def get_components():
+def get_components()->list[Component]:
     return components

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel,validator
 
 class Component(BaseModel):
     id: int
@@ -12,5 +12,11 @@ class Component(BaseModel):
     weight: float
     status: str
     ean_number: str
+
+    @validator('weight','price', pre=True)
+    def empty_str_to_zero(cls, value):
+        if value == '':
+            return 0
+        return value
 
 

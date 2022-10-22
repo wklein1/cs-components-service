@@ -1,6 +1,7 @@
 from pydantic import BaseModel,Field,Extra,validator
+from models.custom_base_model import CustomBaseModel
 
-class Component(BaseModel):
+class Component(CustomBaseModel):
     id: int
     name: str
     vendor: str
@@ -8,19 +9,13 @@ class Component(BaseModel):
     description: str
     location: str
     manufacturer: str
-    product_group: str = Field(alias="productGroup")
+    product_group: str 
     weight: float
     status: str
-    ean_number: str = Field(alias="eanNumber")
+    ean_number: str
 
     @validator('weight','price', pre=True)
     def empty_str_to_zero(cls, value):
         if value == '':
             return 0
         return value
-
-    class Config:
-        allow_population_by_field_name = True
-        extra = Extra.forbid
-
-

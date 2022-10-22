@@ -18,3 +18,10 @@ def test_get_components_endpoint():
         "status": "new",
         "ean_number": "4250812439109"
   }
+
+def test_get_components_endpoint_ids():
+    test_client = TestClient(app)
+    response = test_client.get("/components")
+    assert response.status_code == 200
+    assert response.json()[1]["id"] == 1
+    assert response.json()[2]["id"] == 2

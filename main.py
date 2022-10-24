@@ -2,18 +2,30 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import modules.csv.csv_reader as csv_reader
 from models.component_model import Component
+from decouple import config
+from deta import Deta, Base
+import uuid
 
+PROJECT_KEY = config("PROJECT_KEY")
+
+deta = Deta(PROJECT_KEY)
+componentsDB = deta.Base("componentsdb")
 
 components = csv_reader.read_csv("hardware_components.csv")
 
 
-def set_ids(components):
-    id = 0
+def insert_components_to_db(components):
     for component in components:
-        component["id"]=id
-        id+=1
+        component["id"] = str(uuid.uuid1())
+       
+        try:
+            componentsDB.insert(Component(**component).dict())
+        except Exception as ex:
+            print(f"{component['name']} is already in db!")
         
-set_ids(components)
+
+insert_components_to_db(components)
+
 
 app = FastAPI()
 
@@ -33,4 +45,5 @@ app.add_middleware(
 
 @app.get("/components", response_model = list[Component])
 def get_components()->list[Component]:
-    return components
+    db_components_response = componentsDB.fetch()
+    return db_components_response.items

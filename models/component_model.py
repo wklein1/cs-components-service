@@ -2,8 +2,8 @@ from models.custom_base_model import CustomBaseModel
 from pydantic import Field,validator
 
 class Component(CustomBaseModel):
-    id: int
-    name: str
+    id: str 
+    key: str = Field(alias="name")
     vendor: str
     price: float
     description: str

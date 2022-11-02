@@ -42,8 +42,12 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["*"])
 
-
-@app.get("/components", response_model = list[Component])
+@app.get(
+    "/components",
+    response_model=list[Component],
+    response_description="Returns list of components.",
+    description="Get all available components.", 
+)
 def get_components()->list[Component]:
     db_components_response = componentsDB.fetch()
     return db_components_response.items

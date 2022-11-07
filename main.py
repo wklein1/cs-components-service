@@ -19,7 +19,7 @@ def insert_components_to_db(components):
         component["id"] = str(uuid.uuid1())
        
         try:
-            componentsDB.insert(Component(**component).dict())
+            componentsDB.insert(component_models.Component(**component).dict())
         except Exception as ex:
             print(f"{component['name']} is already in db!")
         

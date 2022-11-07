@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 import modules.csv.csv_reader as csv_reader
-from models.component_model import Component
+from models import component_models
 from decouple import config
 from deta import Deta, Base
 import uuid
@@ -44,10 +44,26 @@ app.add_middleware(
 
 @app.get(
     "/components",
-    response_model=list[Component],
+    response_model=list[component_models.Component],
     response_description="Returns list of components.",
     description="Get all available components.", 
 )
-def get_components()->list[Component]:
+def get_components()->list[component_models.Component]:
     db_components_response = componentsDB.fetch()
     return db_components_response.items
+
+
+@app.get(
+    "/components/{component_id}/price",
+    response_model=component_models.PriceResponseModel,
+    response_description="Returns an object with the price of the component.",
+    description="Get the price for a specific component.", 
+)
+def get_component_price(component_id)->component_models.PriceResponseModel:
+    db_component_response = componentsDB.fetch({"id":component_id})
+    if len(db_component_response.items) == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Component not found")
+    price_obj = {
+        "price":db_component_response.items[0]["price"]
+    }
+    return price_obj

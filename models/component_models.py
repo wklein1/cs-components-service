@@ -19,3 +19,6 @@ class Component(CustomBaseModel):
         if value == '':
             return 0
         return value
+
+class PriceResponseModel(CustomBaseModel):
+    price: float

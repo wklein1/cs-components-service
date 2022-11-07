@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 import modules.csv.csv_reader as csv_reader
-from models import component_models
+from models import component_models, error_models
 from decouple import config
 from deta import Deta, Base
 import uuid
@@ -57,6 +57,10 @@ def get_components()->list[component_models.Component]:
     "/components/{component_id}/price",
     response_model=component_models.PriceResponseModel,
     response_description="Returns an object with the price of the component.",
+    responses={404 :{
+                "model": error_models.HTTPErrorModel,
+                "description": "Error raised if the component can not be found."
+        }},
     description="Get the price for a specific component.", 
 )
 def get_component_price(component_id)->component_models.PriceResponseModel:

@@ -4,11 +4,11 @@
 
 ![components](https://user-images.githubusercontent.com/75163928/200687418-f0a748e3-f2be-4857-a1f9-3728777b09eb.jpg)
 
-Components service deploy: https://cs-components-service.deta.dev/docs
-
 A fullstack application project with microservice architecture backend. (Work in progress)
 
-Tech Stack: React, FastApi, Deta (noSQL DB)
+Tech Stack: React, FastApi, Deta (noSQL cloud DB)
+
+Components service deploy: https://cs-components-service.deta.dev/docs
 
 Frontend: https://github.com/kbe-aw2022/frontend  	(deploy: https://kbe-aw2022-frontend.netlify.app/)
 

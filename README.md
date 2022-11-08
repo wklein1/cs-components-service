@@ -18,7 +18,7 @@ Api gateway: https://github.com/wklein1/cs-api-gateway
 
 Identity provider: https://github.com/wklein1/cs-identity-provider
 
-Components service: https://github.com/wklein1/cs-components-service
+Components service: https://github.com/wklein1/cs-components-service (You are here)
 
 Product service: https://github.com/wklein1/cs-product-service
 
